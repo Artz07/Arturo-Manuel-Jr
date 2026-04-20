@@ -249,8 +249,8 @@ const Hero = () => {
           className="flex flex-col sm:flex-row gap-8 justify-center lg:justify-start items-center"
         >
           <a 
-            href="/Arturo_Manuel_Resume_v1.pdf" 
-            download="Arturo_Manuel_Resume.pdf"
+            href="/Resume_Arturo Manuel_V1.pdf" 
+            download="Resume_Arturo Manuel_V1.pdf"
             className="flex items-center gap-2 px-8 py-4 bg-accent text-bg-primary font-bold rounded-full hover:shadow-[0_0_25px_rgba(0,255,153,0.5)] transition-all group pointer-events-auto"
           >
             Download Resume <Download size={18} className="group-hover:translate-y-1 transition-transform" />
