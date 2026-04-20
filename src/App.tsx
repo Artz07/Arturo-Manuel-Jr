@@ -239,7 +239,7 @@ const Hero = () => {
           transition={{ delay: 0.2 }}
           className="text-text-secondary text-lg md:text-xl max-w-lg mx-auto lg:mx-0 mb-10 leading-relaxed"
         >
-          Entry-level IT Support Specialist with expertise in user account management, incident resolution, and Active Directory administration. Cum Laude graduate dedicated to delivering exceptional technical support.
+          Entry-level IT Support / Service Desk professional with a Bachelor's degree in IT and hands-on experience in Active Directory, Azure AD, and Jira. Cum Laude graduate dedicated to transforming complex technical problems into simple, user-focused solutions.
         </motion.p>
         
         <motion.div 
@@ -249,7 +249,7 @@ const Hero = () => {
           className="flex flex-col sm:flex-row gap-8 justify-center lg:justify-start items-center"
         >
           <a 
-            href="/Resume.pdf" 
+            href="/Arturo_Manuel_Resume_v1.pdf" 
             download="Arturo_Manuel_Resume.pdf"
             className="flex items-center gap-2 px-8 py-4 bg-accent text-bg-primary font-bold rounded-full hover:shadow-[0_0_25px_rgba(0,255,153,0.5)] transition-all group pointer-events-auto"
           >
@@ -289,6 +289,7 @@ const Hero = () => {
             className="w-full h-full object-cover"
             referrerPolicy="no-referrer"
             onError={(e) => {
+              e.currentTarget.onerror = null; // Prevent infinite loop
               e.currentTarget.src = "https://picsum.photos/seed/portrait/800/800";
             }}
           />
@@ -310,10 +311,10 @@ const Hero = () => {
 
 const Stats = () => {
   const stats = [
-    { label: "Experience", value: "6 months" },
+    { label: "GWA Score", value: "1.55" },
     { label: "IT Certifications", value: "5+" },
-    { label: "Tickets Resolved", value: "50+" },
-    { label: "Grad Honors", value: "Cum Laude" }
+    { label: "Active Projs", value: "10+" },
+    { label: "Honors", value: "Cum Laude" }
   ];
 
   return (
@@ -395,8 +396,9 @@ const Certifications = () => {
     { name: "Networking Devices and Initial Configuration", provider: "Cisco Networking Academy", date: "2026", link: "https://www.credly.com/badges/de445b4e-6155-4a10-8e20-8098aefe51c8" },
     { name: "Network Addressing and Basic Troubleshooting", provider: "Cisco Networking Academy", date: "2026", link: "https://www.credly.com/badges/e5163843-2333-413d-9193-54ff6cd43346" },
     { name: "Google IT Support Professional", provider: "Google/Coursera", date: "2025", link: "https://coursera.org/share/2dffe8b18c3d502303d2a592d4d4ac41" },
-    { name: "Network Basics", provider: "Cisco Networking Academy", date: "2025", link: "https://www.credly.com/badges/eefeb927-2d13-449e-bc20-6d32dd3d3f5e" },
+    { name: "Networking Basics", provider: "Cisco Networking Academy", date: "2025", link: "https://www.credly.com/badges/eefeb927-2d13-449e-bc20-6d32dd3d3f5e" },
     { name: "Introduction to Cybersecurity", provider: "Cisco Networking Academy", date: "2025", link: "https://www.credly.com/badges/7164ec89-07a5-4fc1-a4d2-482b732339f7" },
+    { name: "Web Development Bootcamp", provider: "Accenture | Udemy", date: "2024", link: "#" },
   ];
 
   return (
