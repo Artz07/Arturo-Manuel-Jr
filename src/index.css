@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-accent: #00ff99;
+  --color-accent-dark: #00cc7a;
+  --color-bg-primary: #0a0a0a;
+  --color-bg-secondary: #151515;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: rgba(255, 255, 255, 0.6);
+  --color-text-muted: rgba(255, 255, 255, 0.4);
+  --color-border-subtle: rgba(255, 255, 255, 0.05);
+}
+
+@layer base {
+  :root.light {
+    --color-bg-primary: #f8fafc;
+    --color-bg-secondary: #ffffff;
+    --color-text-primary: #0f172a;
+    --color-text-secondary: #334155;
+    --color-text-muted: #64748b;
+    --color-border-subtle: rgba(15, 23, 42, 0.08);
+    
+    /* Refined accent for light mode legibility */
+    --color-accent: #059669;
+    --color-accent-dark: #047857;
+  }
+
+  body {
+    @apply bg-bg-primary text-text-primary font-sans antialiased selection:bg-accent/30 selection:text-accent transition-colors duration-300;
+  }
+}
+
+@layer utilities {
+  .glow-text {
+    @apply bg-linear-to-r from-accent to-[#00d4ff] bg-clip-text text-transparent;
+    filter: drop-shadow(0 0 10px rgba(0, 255, 153, 0.4));
+  }
+  
+  .glass {
+    @apply bg-text-primary/5 backdrop-blur-xl border border-text-primary/10;
+  }
+  
+  .glass-card {
+    @apply bg-bg-secondary border border-border-subtle transition-all duration-500 hover:border-accent/40;
+  }
+}
+
+* {
+  scroll-behavior: smooth;
+}
